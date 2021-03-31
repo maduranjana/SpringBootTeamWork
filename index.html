@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Codefest Team Work</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function () {
+
+    });
+  </script>
+</head>
+
+<body>
+  <section class="section">
+    <div class="container">
+      <h1 class="title">
+        Codefest Team Work
+      </h1>
+      <br>
+
+
+
+      <div class="columns">
+        <div class="column">
+          <h2 class="subtitle">
+            Save New Users
+          </h2>
+          <div class="field">
+            <label class="label">Name</label>
+            <div class="control">
+              <input id="name" class="input" type="text">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Age</label>
+            <div class="control">
+              <input id="age" class="input" type="number">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Telephone</label>
+            <div class="control">
+              <input id="telephone" class="input" type="tel">
+            </div>
+          </div>
+
+
+          <div class="field">
+            <label class="label">Username</label>
+            <div class="control">
+              <input id="usn" class="input" type="text">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Password</label>
+            <div class="control">
+              <input id="psw" class="input" type="password">
+            </div>
+          </div>
+
+          <div class="field">
+            <div class="control">
+              <button onclick="addNewUser()" id="button" class="button is-primary">Save User</button>
+            </div>
+          </div>
+
+
+
+        </div>
+        <div class="column">
+          <h2 class="subtitle">
+            Save New Product
+          </h2>
+          <div class="field">
+            <label class="label">Product Name</label>
+            <div class="control">
+              <input id="pname" class="input" type="text">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Product Description</label>
+            <div class="control">
+              <input id="pdescription" class="input" type="text">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Product Buy Price</label>
+            <div class="control">
+              <input id="pbuyprice" class="input" type="number">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Product Sell Price</label>
+            <div class="control">
+              <input id="psellprice" class="input" type="number">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Product Quantity</label>
+            <div class="control">
+              <input id="pqty" class="input" type="number">
+            </div>
+          </div>
+
+
+          <div class="field">
+            <div class="control">
+              <button onclick="addNewProduct()" id="button" class="button is-primary">Save Product</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="column">
+
+          <h2 class="subtitle">
+            Add Product Category
+          </h2>
+          <div class="field">
+            <label class="label">Cart Name</label>
+            <div class="control">
+              <input id="categoryname" class="input" type="text">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Product Description</label>
+            <div class="control">
+              <input id="categorydescription" class="input" type="text">
+            </div>
+          </div>
+
+
+
+          <div class="field">
+            <div class="control">
+              <button onclick="addNewcategory()" id="button" class="button is-primary">Add Category</button>
+            </div>
+          </div>
+
+
+
+        </div>
+
+      </div>
+
+
+
+
+      <h2 class="subtitle">
+        Users
+      </h2>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th><abbr title="Id">Id</abbr></th>
+            <th><abbr title="Name">Name</abbr></th>
+            <th><abbr title="Age">Age</abbr></th>
+            <th><abbr title="Telephone">Telephone</abbr></th>
+            <th><abbr title="Username">Username</abbr></th>
+            <th><abbr title="Password for">Password</abbr></th>
+            <th><abbr title="Update">Update</abbr></th>
+            <th><abbr title="Delete">Delete</abbr></th>
+          </tr>
+        </thead>
+
+        <tbody id="usersTable">
+
+        </tbody>
+      </table>
+
+<br>
+
+      <h2 class="subtitle">
+        Carts
+      </h2>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th><abbr title="Id">Id</abbr></th>
+            <th><abbr title="Product Name">Product</abbr></th>
+            <th><abbr title="Total">Total</abbr></th>
+          </tr>
+
+        </thead>
+
+        <tbody id="cartTable">
+
+        </tbody>
+      </table>
+
+
+
+      <div class="columns">
+        <div class="column">
+
+          <h2 class="subtitle">
+            Products
+          </h2>
+
+
+          <table class="table">
+            <thead>
+              <tr>
+                <th><abbr title="Id">Id</abbr></th>
+                <th><abbr title="Name">Name</abbr></th>
+                <th><abbr title="Descirption">Description</abbr></th>
+                <th><abbr title="Buy Price">Buy Price</abbr></th>
+                <th><abbr title="Sell Price">Sell Price</abbr></th>
+                <th><abbr title="Quantity">Quantity</abbr></th>
+              </tr>
+            </thead>
+
+            <tbody id="productTable">
+
+            </tbody>
+          </table>
+
+        </div>
+        <div class="column">
+
+          <h2 class="subtitle">
+            Categories
+          </h2>
+
+
+          <table class="table">
+            <thead>
+              <tr>
+                <th><abbr title="Id">Id</abbr></th>
+                <th><abbr title="Name">Name</abbr></th>
+                <th><abbr title="Descirption">Description</abbr></th>
+              </tr>
+            </thead>
+
+            <tbody id="categoriesTable">
+
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+
+    </div>
+
+    </div>
+  </section>
+</body>
+
+</html>
